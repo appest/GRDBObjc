@@ -22,7 +22,6 @@ import Foundation
         return db.lastInsertedRowID
     }
     
-
     @objc
     public var userVersion: Int32 {
         get {
