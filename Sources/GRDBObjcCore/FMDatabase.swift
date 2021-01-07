@@ -22,6 +22,26 @@ import Foundation
         return db.lastInsertedRowID
     }
     
+
+    @objc
+    public var userVersion: Int32 {
+        get {
+            var r: Int32 = 0
+            let rs = executeQuery("pragma user_version", argumentsInArray: nil)
+            if let rs = rs, rs.next() {
+                r = rs.int(columnIndex: 0)
+            }
+            rs?.close()
+            return r
+        }
+        set {
+            let query = "pragma user_version = \(newValue)"
+            let rs = executeQuery(query, argumentsInArray: nil)
+            _ = rs?.next()
+            rs?.close()
+        }
+    }
+    
     @objc
     public var changes: CInt {
         return CInt(db.changesCount)
