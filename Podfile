@@ -1,7 +1,7 @@
 use_frameworks!
 
 def common
-  pod 'GRDB.swift', '~> 4.0'
+  pod 'GRDB.swift', '~> 5'
 end
 
 target 'GRDBObjcCoreMacOS' do

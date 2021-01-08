@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		247785166AFF08AD6394B89C /* Pods_GRDBObjcCoreMacOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83042AD404118DCBC569746D /* Pods_GRDBObjcCoreMacOS.framework */; };
+		2A4FB79625A74BFE00209197 /* FMDatabasePool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4FB79525A74BFE00209197 /* FMDatabasePool.swift */; };
 		5659134E1F596527006D14E5 /* NSDataTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5659133C1F596527006D14E5 /* NSDataTests.m */; };
 		566FC3E31F586B6B00919F77 /* NSDateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 566FC3E21F586B6B00919F77 /* NSDateTests.m */; };
 		5680BBE11F57BA5900F67DD0 /* FMDatabaseQueueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5680BBE01F57BA5900F67DD0 /* FMDatabaseQueueTests.swift */; };
@@ -56,6 +57,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2A4FB79525A74BFE00209197 /* FMDatabasePool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FMDatabasePool.swift; sourceTree = "<group>"; };
 		2EC2AE0F2B0D46384DCCF2E5 /* Pods_GRDBObjcMacOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GRDBObjcMacOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5659133C1F596527006D14E5 /* NSDataTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSDataTests.m; sourceTree = "<group>"; };
 		566FC3E21F586B6B00919F77 /* NSDateTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSDateTests.m; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 				5687EB8D1F5D6B0500B4882E /* FMDatabaseQueue.swift */,
 				5687EB8E1F5D6B0500B4882E /* FMResultSet.swift */,
 				5687EB8F1F5D6B0500B4882E /* GRDBObjcBindings.h */,
+				2A4FB79525A74BFE00209197 /* FMDatabasePool.swift */,
 			);
 			path = GRDBObjcCore;
 			sourceTree = "<group>";
@@ -446,6 +449,7 @@
 				5687EBA51F5D6B6200B4882E /* _FMSelectStatement.swift in Sources */,
 				5687EBA81F5D6B6200B4882E /* FMDatabaseQueue.swift in Sources */,
 				5687EBA71F5D6B6200B4882E /* FMDatabase.swift in Sources */,
+				2A4FB79625A74BFE00209197 /* FMDatabasePool.swift in Sources */,
 				5687EBA91F5D6B6200B4882E /* FMResultSet.swift in Sources */,
 				5687EBA61F5D6B6200B4882E /* _FMUpdateStatement.swift in Sources */,
 			);
