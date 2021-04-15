@@ -13,6 +13,7 @@ public class FMDatabasePool: NSObject {
     private var _fmdbs: [(dateBase: Database, fmdb: FMDatabase)] = []
     
     private func inFMDB<T>(_ db: Database, _ block: (FMDatabase) throws -> T) rethrows -> T {
+        objc_sync_enter(self)
         let fmdb: FMDatabase
         if let _fmdb = _fmdbs.first(where: { item -> Bool in
             item.dateBase === db
@@ -22,6 +23,7 @@ public class FMDatabasePool: NSObject {
             fmdb = FMDatabase(db)
             _fmdbs.append((db, fmdb))
         }
+        objc_sync_exit(self)
         return try withoutActuallyEscaping(block) { block in
             try fmdb.autoclosingResultSets { try block(fmdb) }
         }
